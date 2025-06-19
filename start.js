@@ -1,6 +1,7 @@
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { start } = require('repl');
 
 function startBot() {
   const logStream = fs.createWriteStream(path.join(__dirname, 'crash.log'), { flags: 'a' });
@@ -29,4 +30,4 @@ function startBot() {
   });
 }
 
-startBot();
+startBot(); 
